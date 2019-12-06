@@ -45,13 +45,19 @@ let Calculator = {
     }
 }
 
-let string1 = 2;
 
-function actionApplyer(string1, arrayFunc = []) {
-    let result = string1 + arrayFunc;
-    return parseInt(result);
+
+function actionApplyer(num, array_of_functions) {
+    if (array_of_functions === undefined || array_of_functions.length == 0) {
+        return num;
+    } else {
+        for (let i = 0; i < array_of_functions.length; i++) {
+            num = array_of_functions[i](num);
+
+        }
+        return num;
+    }
 }
-
-actionApplyer(string1, arrayFunc)
+actionApplyer(13, array_of_functions)
 
 
