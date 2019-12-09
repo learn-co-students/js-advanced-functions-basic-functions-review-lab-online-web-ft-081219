@@ -29,7 +29,7 @@ let Calculator = {
 
 function actionApplyer(int, array) {
     for (let i = 0; i < array.length; i++){
-        int = array[i](int)
+        int = array[i](int);
     }
-    return int
+    return int;
 }
